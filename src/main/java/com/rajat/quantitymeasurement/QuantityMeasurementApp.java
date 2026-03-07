@@ -10,8 +10,8 @@ public class QuantityMeasurementApp {
     }
 	
 	public static void demonstrateFeetEquality() {
-		Length feet1=new Length(88.0,Length.LengthUnit.FEET);
-		Length feet2=new Length(88.0,Length.LengthUnit.FEET);
+		Length feet1 = new Length(88.0,Length.LengthUnit.FEET);
+		Length feet2 = new Length(88.0,Length.LengthUnit.FEET);
 		printComparison("Feet", feet1, feet2);
 	}
 	
