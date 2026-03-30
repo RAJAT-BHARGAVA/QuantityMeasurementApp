@@ -1,13 +1,14 @@
-package com.rajat.quantitymeasurement;
+package com.rajat.quantitymeasurement.domain;
 
-public enum VolumeUnit implements IMeasurable {
-	MILLILITRE(0.001),
-	LITRE(1.0),
-	GALLON(3.78541);
+public enum LengthUnit implements IMeasurable{
+	FEET(12.0),
+	INCHES(1.0),
+	YARDS(36),
+	CENTIMETERS(1.0/2.54);
 	
 	private final double conversionFactor;
 	
-	VolumeUnit(double conversionFactor){
+	LengthUnit(double conversionFactor) {
 		this.conversionFactor=conversionFactor;
 	}
 	
@@ -17,11 +18,10 @@ public enum VolumeUnit implements IMeasurable {
 	}
 	
 	public double convertToBaseUnit(double value) {
-		return value*getConversionFactor();
+		return value * getConversionFactor(); 
 	}
 	
 	public double convertFromBaseUnit(double value) {
 		return value/getConversionFactor();
 	}
-	
 }

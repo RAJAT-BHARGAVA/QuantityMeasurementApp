@@ -1,4 +1,4 @@
-package com.rajat.quantitymeasurement;
+package com.rajat.quantitymeasurement.domain;
 
 public class Quantity<U extends IMeasurable> {
 	
