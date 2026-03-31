@@ -36,7 +36,7 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
         QuantityModel op1 = new QuantityModel(q1dto.getValue(), q1dto.getUnit());
         QuantityModel op2 = new QuantityModel(q2dto.getValue(), q2dto.getUnit());
         QuantityModel res = new QuantityModel(result.getValue(), result.getUnit().toString());
-        repository.save(new QuantityMeasurementEntity(op1, op2, operation, res));
+        repository.save(new QuantityMeasurementEntity(op1, op2, operation, res, operation));
         return new QuantityDTO(result.getValue(), result.getUnit().toString(), q1dto.getType());
     }
 
